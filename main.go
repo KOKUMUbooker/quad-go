@@ -6,7 +6,10 @@ func QuadA(x,y int) {
 	} else {
 		for row := 1; row <= y; row++ {
 			if row == 1{
-				//print top row
+				for col := 1; col <= x; col++ {
+					//choose character
+				}
+				//print new line
 			} else if row == y {
 				//print bottom row
 			} else {
