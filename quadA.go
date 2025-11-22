@@ -12,17 +12,15 @@ func QuadA(x,y int) {
 	// xLine := "-"
 	// yLine := "|"
 	// space := " "
-	h := x // width
-	w := y // height
 
-	for i := 1; i <= w; i++ {
-		for j := 1; j <= h; j++ {
+	for i := 1; i <= y; i++ {
+		for j := 1; j <= x; j++ {
 			
-			if (j == 1 || j == h) && !(i == 1 || i == w) { // Lines on y axis
+			if (j == 1 || j == x) && !(i == 1 || i == y) { // Lines on y axis
 				fmt.Printf("|")
-			} else if j == 1 || j == h { // Corners
+			} else if j == 1 || j == x { // Corners
 				fmt.Printf("o")
-			} else if i == 1 || i == w { // lines on x axis
+			} else if i == 1 || i == y { // lines on x axis
 				fmt.Printf("-")
 			} else {
 				fmt.Printf(" ")
