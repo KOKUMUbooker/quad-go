@@ -18,7 +18,7 @@ func main() {
 	piscine.QuadA(1, 5)
 
 	// ========= QuadB test ========
-	fmt.Println("====== Quad B ======")
+	fmt.Println("\n====== Quad B ======")
 	piscine.QuadB(5, 3)
 	fmt.Println("")
 	piscine.QuadB(5, 1)
@@ -28,11 +28,11 @@ func main() {
 	piscine.QuadB(1, 5)
 
 	// ========= QuadC test ========
-	fmt.Println("====== Quad C ======")
+	fmt.Println("\n====== Quad C ======")
 
 	// ========= QuadD test ========
-	fmt.Println("====== Quad D ======")
+	fmt.Println("\n====== Quad D ======")
 
 	// ========= QuadE test ========
-	fmt.Println("====== Quad E ======")
+	fmt.Println("\n====== Quad E ======")
 }
