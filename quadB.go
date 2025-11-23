@@ -4,6 +4,10 @@ import "fmt"
 
 // piscine.QuadB(3,4)
 func QuadB(x, y int) {
+	if x < 0 || y < 0 {
+		return
+	}
+
 	for i := 1; i <= y; i++ {
 		for j := 1; j <= x; j++ {
 			if i == 1 && j == 1 { // Upper Left corner

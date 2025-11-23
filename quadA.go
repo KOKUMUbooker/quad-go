@@ -7,6 +7,10 @@ import "fmt"
 // 5,3
 // piscine.QuadA(3,2)
 func QuadA(x, y int) {
+	if x < 0 || y < 0 {
+		return
+	}
+
 	for i := 1; i <= y; i++ {
 		for j := 1; j <= x; j++ {
 			if i == 1 && (j == 1 || j == x) { // Top corner - right & left
