@@ -2,6 +2,7 @@ package piscine
 
 import "fmt"
 
+// eg piscine.QuadE(5,3)
 func QuadE(x, y int) {
 	if x < 0 || y < 0 {
 		return

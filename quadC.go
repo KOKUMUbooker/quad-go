@@ -2,7 +2,7 @@ package piscine
 
 import "fmt"
 
-// piscine.QuadC(3,2)
+// eg piscine.QuadC(3,2)
 func QuadC(x, y int) {
 	if x < 0 || y < 0 {
 		return

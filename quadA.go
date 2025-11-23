@@ -2,10 +2,7 @@ package piscine
 
 import "fmt"
 
-// columns = 5
-// rows = 3
-// 5,3
-// piscine.QuadA(3,2)
+// eg piscine.QuadA(3,2)
 func QuadA(x, y int) {
 	if x < 0 || y < 0 {
 		return
