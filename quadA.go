@@ -2,31 +2,38 @@ package piscine
 
 import "fmt"
 
-// A - QuadA(5,3)
+// piscine.QuadA( x = 5, y = 3)
 // o---o
 // |   |
 // o---o
 
-func QuadA(x,y int) {
-	// corners := "o"
-	// xLine := "-"
-	// yLine := "|"
-	// space := " "
+// columns = 5
+// rows = 3
 
+func QuadA(x,y int) {
 	for i := 1; i <= y; i++ {
 		for j := 1; j <= x; j++ {
-			
-			if (j == 1 || j == x) && !(i == 1 || i == y) { // Lines on y axis
-				fmt.Printf("|")
-			} else if j == 1 || j == x { // Corners
+			if i == 1 && j == 1 {
 				fmt.Printf("o")
-			} else if i == 1 || i == y { // lines on x axis
+			} else if i == 1 && j == x {
+				fmt.Printf("o")
+			} else if i == y && j == 1 {
+				fmt.Printf("o")
+			} else if i == y && j == x {
+				fmt.Printf("o")
+			} else if i == 1 && j > 1 && j < x {
 				fmt.Printf("-")
+			} else if i == y && j > 1 && j < x {
+				fmt.Printf("-")
+			} else if i > 1 && i < y && j == 1 {
+				fmt.Printf("|")
+			} else if  i > 1 && i < y && j == x {
+				fmt.Printf("|")
 			} else {
 				fmt.Printf(" ")
 			}
 
 		}
-			fmt.Printf("\n")
+		fmt.Printf("\n")
 	}
 }

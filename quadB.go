@@ -2,33 +2,32 @@ package piscine
 
 import "fmt"
 
-// B - QuadB(5,3) x = 5, y = 3
+// piscine.QuadB(5,3)
 // /***\
 // *   *
 // \***/
 
-func QuadB(x, y int) {
-	// corners := "o"
-	// xLine := "*"
-	// yLine := "*"
-	// space := " "
+// rows = 3
+// column = 5
 
+func QuadB(x,y int) {
 	for i := 1; i <= y; i++ {
 		for j := 1; j <= x; j++ {
-			if (j == 1 || j == x) && !(i == 1 || i == y) { // Lines on y axis
+			if i == 1 && j == 1 {
+				fmt.Printf("/")
+			} else if i == 1 && j == x {
+				fmt.Printf("\\")
+			} else if i == y && j == 1 {
+				fmt.Printf("\\")
+			} else if i == y && j == x {
+				fmt.Printf("/")
+			} else if i == 1 && j > 1 && j < x {
 				fmt.Printf("*")
-			} else if j == 1 || j == x { // Corners
-
-				if j == 1 && i == 1 { // Top left corner
-					fmt.Printf("/")
-				} else if j == x && i == 1 { // Top right corner
-					fmt.Printf("\\")
-				} else if j == 1 && i == y { // Bottom left corner
-					fmt.Printf("\\")
-				} else { // Bottom right corner
-					fmt.Printf("/")
-				}
-			} else if i == 1 || i == y { // lines on x axis
+			} else if i == y && j > 1 && j < x {
+				fmt.Printf("*")
+			} else if j == 1 && i > 1 && i < y {
+				fmt.Printf("*")
+			} else if j == x && i > 1 && i < y {
 				fmt.Printf("*")
 			} else {
 				fmt.Printf(" ")
