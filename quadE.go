@@ -20,7 +20,7 @@ func QuadE(x, y int) {
 				fmt.Printf("A")
 			} else if (i == 1 || i == y) && (j > 1 && j < x) { // Non-corner top & bottom borders
 				fmt.Printf("B")
-			} else if (i > 1 && i < x) && (j == 1 || j == x) { // Non-corner left & right borders
+			} else if (i > 1 && i < y) && (j == 1 || j == x) { // Non-corner left & right borders
 				fmt.Printf("B")
 			} else {
 				fmt.Printf(" ")
