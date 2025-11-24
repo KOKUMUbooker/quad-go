@@ -1,29 +1,26 @@
 package piscine
 
 import "fmt"
-//ABBBC
-//B   B
-//CBBBA
-//w=x,H=Y,i(y),r&j(5),c
-//piscine.QuadE(5,3)
-func QuadE(x,y int) {
-	for i:=1; i<=y; i++ {
-		for j:=1; j<=x; j++ {
-			if i==1 && j==1{
+
+// eg piscine.QuadE(5,3)
+func QuadE(x, y int) {
+	if x < 0 || y < 0 {
+		return
+	}
+
+	for i := 1; i <= y; i++ {
+		for j := 1; j <= x; j++ {
+			if i == 1 && j == 1 { // Top Left corner
 				fmt.Printf("A")
-			} else if i==1 && j == x{
+			} else if i == 1 && j == x { // Top right corner
 				fmt.Printf("C")
-			} else if i==y && j==1{
+			} else if i == y && j == 1 { // Bottom Left corner
 				fmt.Printf("C")
-			} else if i==y && j ==x {
+			} else if i == y && j == x { // Bottom right corner
 				fmt.Printf("A")
-			} else if i==1 && j >1 && j<x {
+			} else if (i == 1 || i == y) && (j > 1 && j < x) { // Non-corner top & bottom borders
 				fmt.Printf("B")
-			} else if i== y && j>1 && j < x {
-				fmt.Printf("B")
-			} else if j ==1 && i > 1 && i < x {
-				fmt.Printf("B")
-			} else if j ==x && i>1 && i< x {
+			} else if (i > 1 && i < x) && (j == 1 || j == x) { // Non-corner left & right borders
 				fmt.Printf("B")
 			} else {
 				fmt.Printf(" ")
@@ -32,4 +29,3 @@ func QuadE(x,y int) {
 		fmt.Printf("\n")
 	}
 }
-
