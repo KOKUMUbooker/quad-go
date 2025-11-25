@@ -18,9 +18,9 @@ func QuadE(x, y int) {
 				fmt.Printf("C")
 			} else if i == y && j == x { // Bottom right corner
 				fmt.Printf("A")
-			} else if (i == 1 || i == y) && (j > 1 && j < x) { // Non-corner top & bottom borders
+			} else if (i == 1 || i == y) && (j > 1 && j < x) { // Non-corner top and bottom borders
 				fmt.Printf("B")
-			} else if (i > 1 && i < y) && (j == 1 || j == x) { // Non-corner left & right borders
+			} else if (i > 1 && i < y) && (j == 1 || j == x) { // Non-corner left and right borders
 				fmt.Printf("B")
 			} else {
 				fmt.Printf(" ")
